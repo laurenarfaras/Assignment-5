@@ -15,17 +15,19 @@
           <!-- Add a ui-sref property to the anchor tags to allow navigation between different states -->
           <nav>
             <ul class="nav nav-pills">
-              <li><a>List View</a></li>
-              <li><a>Map View</a></li>
-              <li><a>Create New Listing</a></li>
+              <li><a ui-sref="listings.list">List View</a></li>
+              <li><a ui-sref="listings.map">Map View</a></li>
+              <li><a ui-sref="listings.create">Create New Listing</a></li>
             </ul>
           </nav>
         </div>
       </div>
-      <div ui-view></div>
+      <div ui-view>
+        <!-- where the view goes -->
+      </div>
     </div>
     <!-- Dependencies -->
-    <script src="/public/lib/jquery/dist/jquery.min.js"></script
+    <script src="/public/lib/jquery/dist/jquery.min.js"></script>
     <script src="/public/lib/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="/public/lib/angular/angular.js"></script>
     <script src="/public/lib/angular-ui-router/release/angular-ui-router.js"></script>

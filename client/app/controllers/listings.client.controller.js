@@ -74,6 +74,8 @@ angular.module('listings').controller('ListingsController', ['$scope', '$locatio
     };
 
     $scope.update = function(isValid) {
+      debugger;
+      $scope.error = null;
       /*
         Fill in this function that should update a listing if the form is valid. Once the update has
         successfully finished, navigate back to the 'listing.list' state using $state.go(). If an error
@@ -81,6 +83,7 @@ angular.module('listings').controller('ListingsController', ['$scope', '$locatio
        */
        if (!isValid) {
          $scope.broadcast('show-errors-check-validity', 'articleForm');
+
          return false;
        }
 
